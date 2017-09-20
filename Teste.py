@@ -1,30 +1,35 @@
 import os,datetime#,locale
+import os
+import shutil
+
+direc = os.getcwd()
 #locale.setlocale(locale.LC_TIME, "pt_BR.UTF-8")
 
-
+print direc
 data = open('nomes.txt','r')
 
 n_data = data.readlines()
 n_data = map(lambda s: s.strip(),n_data)
 
 
+if os.access(n_data[1],os.F_OK)== False:
+    os.mkdir(n_data[1])
+os.chdir(n_data[1])
+#sub = open('Teta.txt','r')
+#print sub.readlines()
+for i in range(5):
+    os.system("touch "+str(i)+".txt")
 
-
-for num in range(len(n_data)-5):
-    print n_data[num+5]
-
-k = '''
-Certificamos que '''
-
-k = k + n_data[5]
-
-k = k+''' participou do '''
-k=k+ n_data[0]+''': "'''+n_data[1]+'''"'''
-k=k+''''no dia ''' + n_data[2] + ''', realizado pelo Programa de Educação Tutorial em Física (PET-FÍSICA) da Universidade Estadual de Maringá, com carga horária total de '''
-k=k+n_data[3]+''' ('''+n_data[4]+''').
 
 '''
-today = datetime.date.today()
-k=k+'''Maringá-PR,''' + today.strftime('%d de %B de %Y').lower()
-#print k
+y=len(n_data)
+print y
+for num in range(5,y-1):
+    print n_data[num]
 
+
+from PIL import ImageFont
+font = ImageFont.truetype('Comic Sans MS.ttf', 12)
+size = font.getsize('Hello world')
+print(size)
+'''
