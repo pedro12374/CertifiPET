@@ -7,6 +7,12 @@ data = open('nomes.txt','r')
 n_data = data.readlines()
 n_data = map(lambda s: s.strip(),n_data)
 
+
+
+
+for num in range(len(n_data)-5):
+    print n_data[num+5]
+
 k = '''
 Certificamos que '''
 
@@ -20,5 +26,5 @@ k=k+n_data[3]+''' ('''+n_data[4]+''').
 '''
 today = datetime.date.today()
 k=k+'''Maringá-PR,''' + today.strftime('%d de %B de %Y').lower()
-print k
+#print k
 
