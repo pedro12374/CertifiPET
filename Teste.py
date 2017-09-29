@@ -1,7 +1,8 @@
+#coding: utf-8
 import os,datetime#,locale
 import os
 import shutil
-
+'''
 direc = os.getcwd()
 #locale.setlocale(locale.LC_TIME, "pt_BR.UTF-8")
 
@@ -21,6 +22,10 @@ for i in range(5):
     os.system("touch "+str(i)+".txt")
 
 
+
+
+
+
 '''
 y=len(n_data)
 print y
@@ -29,7 +34,7 @@ for num in range(5,y-1):
 
 
 from PIL import ImageFont
-font = ImageFont.truetype('Comic Sans MS.ttf', 12)
-size = font.getsize('Hello world')
-print(size)
+font = ImageFont.truetype('/usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-L.ttf', 10)
+size = font.getsize('Luiz Felipe Demétrio')
+print size[0]
 '''
