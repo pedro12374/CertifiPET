@@ -6,14 +6,15 @@ Só é nescessario clonar o arquivo certificados.py e ter Python 2.7 instalado e
 
 # Utilização
 
-Para utilizar este programa é necessário um arquivo de texto chamado 'nomes.txt', e dentro dele em ordem
-Tipo de Atividade(Ex: Seminário, Apresentação, Palestra)
-Nome da Atividade
-Data em que ocorreu a Atividade
-Quantidade de horas concedidas em formato numérico(Ex: 3)
-Quantidade de horas concedidas por extenso dentro de um parêntese(Ex: (Três) )
-Nomes dos participantes, um por linha
-Na última linha, o nome do responsável pela atividade
+Para utilizar este programa é necessário um arquivo de texto chamado 'nomes.txt', e dentro dele em ordem:
+
+- Tipo de Atividade(Ex: Seminário, Apresentação, Palestra)
+- Nome da Atividade
+- Data em que ocorreu a Atividade
+- Quantidade de horas concedidas em formato numérico(Ex: 3)
+- Quantidade de horas concedidas por extenso dentro de um parêntese(Ex: (Três) )
+- Nomes dos participantes, um por linha
+- Na última linha, o nome do responsável pela atividade
 
 Também deve ser criada uma pasta com o nome idêntico ao preenchido no *Nome da Atividade* e dentro desta pasta colocado os arquivos de cabeçalho e marca d’água
 
