@@ -1,0 +1,17 @@
+Abra o arquivo nomes, coloque nesta ordem
+Tipo de Apresentação. Ex: Seminário, CinePET, Oficina, ...;
+Nome da atvididade. Ex:Jurassic Park, Física de Párticulas, Otíca, ....;
+Data em que ocorreu a atividade. Ex: 29/02/2999;
+Numero de Horas. Ex: 2,57,42,...;
+Numero de Horas por extenso e entre parenseses. Ex:(Duas),(Cinquenta e Sete),(Quarrenta e Duas),...;
+Nome dos Participantes por linha, cada pessoa em uma linha diferente. Ex:
+Marcos
+João
+Rebeca
+Irene
+...
+
+Então, após preencher esses dados, clique duas vezes em certificado.py e espere a tela roda e fechar sozinha.
+
+Duvidas:
+Pedro Haerter, pedrohaerter.095@gmail.com

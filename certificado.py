@@ -1,14 +1,20 @@
 #coding: utf-8
 import os,datetime,locale
 from PIL import ImageFont
-locale.setlocale(locale.LC_TIME, "pt_BR.UTF-8")
+from shutil import copy2
+locale.setlocale(locale.LC_ALL, '')
 
 data = open('nomes.txt','r')
 n_data = data.readlines()
 n_data = map(lambda s: s.strip(),n_data)
 
+
+
 if os.access(n_data[1],os.F_OK)== False:
     os.mkdir(n_data[1])
+
+copy2("PET.png", str(n_data[1]))
+copy2("Cabecalho.png", str(n_data[1]))
 os.chdir(n_data[1])
 
 tam=len(n_data)
@@ -37,6 +43,7 @@ for num in range(5,tam-1):
     \\begin{center}
         \HUGE{CERTIFICADO}\\\[50pt]
     \end{center}
+    \\noindent
     '''
 
     cert = cert+'''
@@ -45,38 +52,37 @@ for num in range(5,tam-1):
     today = datetime.date.today()
     dia = today.strftime('%d de %B de %Y').lower()
 
-    font = ImageFont.truetype('/usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-L.ttf', 12)
-    size = font.getsize(str(n_data[-1]))
-
-    tmn=(200-int(size[0]))/2
-
 
     cert = cert+'''
     \\begin{center}
     {\\fontsize{19pt}{24pt} \selectfont Maringá-PR, '''+dia+'''.}\\\\[220pt]
     \end{center}
-    \\begin{flushleft}
-    $\\rule{6cm}{0.15mm}$\hfill$\\rule{6cm}{0.15mm}$\\\\
+
+    \\begin{center}
+    
+    $\\rule{10cm}{0.15mm}$\\\\
 
 
 
 
 
-    \\footnotesize{\hspace{'''+str(tmn)+'''px} '''+n_data[-1]+'''\hfill MARCOS CESAR DANHONI NEVES\\\\
+    Tutor Prof. Dr. Marcos Cesar Danhoni Neves
 
-    \hspace{60pt}PET-Física\hspace{185pt} Professor Tutor}
-    \end{flushleft}
+    
+    
+    \end{center}
     \end{document}
     '''
 
     nome = n_data[num].replace(' ','_')
-
+    print nome
     f = open(str(nome)+ ".tex","w")
     f.write(cert)
     f.close()
     cert=""
 
     temp=os.getcwd()
+
     os.system('pdflatex '+nome+'.tex')
     os.system('pdflatex '+nome+'.tex')
     os.system('pdflatex '+nome+'.tex')
